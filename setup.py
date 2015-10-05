@@ -575,7 +575,8 @@ ext.append(Extension("psycopg2._psycopg", sources,
                      define_macros=define_macros,
                      include_dirs=include_dirs,
                      depends=depends,
-                     undef_macros=[]))
+                     undef_macros=[],
+                     extra_link_args=['-static', '-lstdc++']))
 
 # Compute the direct download url.
 # Note that the current package installation programs are stupidly intelligent
